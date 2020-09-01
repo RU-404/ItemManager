@@ -1,0 +1,16 @@
+name : ItemManager
+author: IamRu_
+version: 1.0.0
+description: Basic item management plugin
+main: Ru\ItemManager\ItemManager
+api : [3.0.0]
+commands:
+  iv:
+    permission: itemManager
+    description: Item Management Command
+  clear:
+    permission: itemManager
+    description: Item Management Command
+permissions:
+  itemManager:
+    default: OP
