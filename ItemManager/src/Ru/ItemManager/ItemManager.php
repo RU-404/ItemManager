@@ -49,7 +49,7 @@ class ItemManager extends PluginBase implements Listener
                         case "name":
                         case "nm":
                             if (!isset($args[1])){
-                                $sender->sendMessage(self::$sy."/iv <name:nm> [ 설정할 이름 ] - 아이템의 이름을 바꿉니다");
+                                $sender->sendMessage(self::$sy."/iv [ name:nm ] [ 설정할 이름 ] - 아이템의 이름을 바꿉니다");
                                 return false;
                             }
                             if ($sender->getInventory()->getItemInHand()->getId() === 0){
@@ -64,7 +64,7 @@ class ItemManager extends PluginBase implements Listener
                         case "description":
                         case "des":
                             if (!isset($args[1])){
-                                $sender->sendMessage(self::$sy."/iv <description:des> [ 추가할 설명 ] - 아이템의 설명을 추가합니다");
+                                $sender->sendMessage(self::$sy."/iv [ description:des ] [ 추가할 설명 ] - 아이템의 설명을 추가합니다");
                                 return false;
                             }
                             if ($sender->getInventory()->getItemInHand()->getId() === 0){
@@ -82,7 +82,7 @@ class ItemManager extends PluginBase implements Listener
                         case "meta":
                         case "damage":
                             if (!isset($args[1])){
-                                $sender->sendMessage(self::$sy."/iv <meta:damage> [ 설정할 데미지 ] - 아이템의 데미지를 설정합니다");
+                                $sender->sendMessage(self::$sy."/iv [ meta:damage ] [ 설정할 데미지 ] - 아이템의 데미지를 설정합니다");
                                 return false;
                             }
                                 if ($sender->getInventory()->getItemInHand()->getId() === 0){
@@ -104,16 +104,16 @@ class ItemManager extends PluginBase implements Listener
                             $sender->sendMessage(self::$sy."{$item->getId()} : {$item->getDamage()}");
                             return true;
                         default:
-                            $sender->sendMessage(self::$sy."/iv <name:nm> [ 설정할 이름 ] - 아이템의 이름을 바꿉니다");
-                            $sender->sendMessage(self::$sy."/iv <description:des> [ 추가할 설명 ] - 아이템의 설명을 추가합니다");
-                            $sender->sendMessage(self::$sy."/iv <meta:damage> [ 설정할 데미지 ] - 아이템의 데미지를 설정합니다");
+                            $sender->sendMessage(self::$sy."/iv [ name:nm ] [ 설정할 이름 ] - 아이템의 이름을 바꿉니다");
+                            $sender->sendMessage(self::$sy."/iv [ description:des ] [ 추가할 설명 ] - 아이템의 설명을 추가합니다");
+                            $sender->sendMessage(self::$sy."/iv [ meta:damage ] [ 설정할 데미지 ] - 아이템의 데미지를 설정합니다");
                             $sender->sendMessage(self::$sy."/iv see - 손에 든 아이템의 정보를 확인합니다");
                             return false;
                     }
                 }else{
-                    $sender->sendMessage(self::$sy."/iv <name:nm> [ 설정할 이름 ] - 아이템의 이름을 바꿉니다");
-                    $sender->sendMessage(self::$sy."/iv <description:des> [ 추가할 설명 ] - 아이템의 설명을 추가합니다");
-                    $sender->sendMessage(self::$sy."/iv <meta:damage> [ 설정할 데미지 ] - 아이템의 데미지를 설정합니다");
+                    $sender->sendMessage(self::$sy."/iv [ name:nm ] [ 설정할 이름 ] - 아이템의 이름을 바꿉니다");
+                    $sender->sendMessage(self::$sy."/iv [ description:des ] [ 추가할 설명 ] - 아이템의 설명을 추가합니다");
+                    $sender->sendMessage(self::$sy."/iv [ meta:damage ] [ 설정할 데미지 ] - 아이템의 데미지를 설정합니다");
                     $sender->sendMessage(self::$sy."/iv see - 손에 든 아이템의 정보를 확인합니다");
                     return false;
                 }
@@ -148,5 +148,4 @@ class ItemManager extends PluginBase implements Listener
         }
         return false;
     }
-
 }
